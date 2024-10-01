@@ -110,6 +110,88 @@
             margin-bottom: 1%;
             color: #000045;
         }
+        .feedback{
+            color: #000045;
+        }
+        .slider-container{
+            width: 350px;
+            overflow: hidden;
+            border: 13px solid #F0F0F0;
+            border-radius: 7px;
+            box-shadow: 10px 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        .slider{
+            display: flex;
+            animation: slide 16s infinite;
+        }
+        @keyframes slide{
+            0%{
+                transform: translateX(0);
+            }
+            25%{
+                transform: translateX(0);
+            }
+            30%{
+                transform: translateX(-100%);
+            }
+            50%{
+                transform: translateX(-100%);
+            }
+            55%{
+                transform: translateX(-200%);
+            }
+            75%{
+                transform: translateX(-200%);
+            }
+            80%{
+                transform: translateX(-300%);
+            }
+            100%{
+                transform: translateX(0);
+            }
+        }
+        .image{
+            width: 350px;
+            height: 240px;
+        }
+        .form-container{
+            background-color: #fafafa;
+            line-height: 1.5;
+            border-radius: 5px;
+            padding: 30px;
+        }
+        .icon{
+            cursor: pointer;
+            outline: none;
+            font-size: 25px;
+            color: #e0e0e0;
+        }
+        input[type="checkbox"]{
+            display: none;
+        }
+        input[type="checkbox"]:checked + .icon{
+            color: goldenrod;
+        }
+        .table-td{
+            text-align: left;
+        }
+        .submit-btn{
+            width: 130px;
+            height: 35px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #000045;
+            background-color: goldenrod;
+            border-width: 0;
+            border-radius: 5px;
+            padding: 5px;
+            cursor: pointer;
+            transition: .3s;
+        }
+        .submit-btn:hover{
+            background-color: transparent;
+            border-width: 1px;
+            border-color: #000045;
+        }
     </style>
 </head>
 <body>
@@ -138,6 +220,82 @@
         Enjoy a taste of culinary excellence!
         <br><br>
     </p>
+    </div>
+
+    <div class="feedback"></div>
+        <table class="center" cellspacing="100">
+            <tr>
+                <td>
+                    <font size="25px"><i class="fa fa-xing"></i><br></font>
+                    <h1>KanSoep Bistro</h1>
+                    <div class="slider-container">
+                        <div class="slider">
+                            <img src="slider1.jpg" class="image">
+                            <img src="slider2.jpg" class="image">
+                            <img src="slider3.jpg" class="image">
+                            <img src="slider4.jpg" class="image">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-container">
+                        <h3>Your Feedback Matters</h3>
+                        Name (optional)<br>
+                        <input type="text" id="name" placeholder="Name" size="40">
+                        <br><br>
+                        Mobile Number (optional)<br>
+                        <input type="number" id="number" placeholder="Mobile Number" size="60">
+                        <br><br>
+                        Comments & Suggestions<br>
+                        <textarea id="comment" placeholder="Type your comments here..." rows="8" cols="32"></textarea>
+                        <br><br>
+                        <table cellspacing="5" cellpadding="5">
+                            <tr>
+                                <td><font color="#F0F0F0"></font></td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td class="table-td">Dining Experience</td>
+                                <td><input type="radio" name="dining-exp" value="1"></td>
+                                <td><input type="radio" name="dining-exp" value="2"></td>
+                                <td><input type="radio" name="dining-exp" value="3"></td>
+                                <td><input type="radio" name="dining-exp" value="4"></td>
+                                <td><input type="radio" name="dining-exp" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td class="table-td">Waiting Time</td>
+                                <td><input type="radio" name="waiting-time" value="1"></td>
+                                <td><input type="radio" name="waiting-time" value="2"></td>
+                                <td><input type="radio" name="waiting-time" value="3"></td>
+                                <td><input type="radio" name="waiting-time" value="4"></td>
+                                <td><input type="radio" name="waiting-time" value="5"></td>
+                            </tr>
+                            <tr>
+                                <td class="table-td">Service</td>
+                                <td><input type="radio" name="service" value="1"></td>
+                                <td><input type="radio" name="service" value="2"></td>
+                                <td><input type="radio" name="service" value="3"></td>
+                                <td><input type="radio" name="service" value="4"></td>
+                                <td><input type="radio" name="service" value="5"></td>
+                            </tr>
+                        </table>
+                        <br><br>
+                        Rate us<br>
+                        <label><input type="checkbox"><i class="icon fa fa-star"></i></label>
+                        <label><input type="checkbox"><i class="icon fa fa-star"></i></label>
+                        <label><input type="checkbox"><i class="icon fa fa-star"></i></label>
+                        <label><input type="checkbox"><i class="icon fa fa-star"></i></label>
+                        <label><input type="checkbox"><i class="icon fa fa-star"></i></label>
+                        <br><br><br>
+                        <input type="submit" class="submit-btn"><br><br>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </div>
 
     <div class="contact-info">
