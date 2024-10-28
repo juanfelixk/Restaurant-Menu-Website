@@ -16,9 +16,11 @@
             background-image: 
                 linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 100%),
                 url('background.jpg');
-            background-size: 100%;
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
-            overflow: hidden;            
+            overflow: hidden;
+            object-fit: cover;     
         }
         .xing{
             font-size: 40px;
@@ -41,8 +43,9 @@
         .logo{
             width: 150px;
             margin-top: 20%;
+            display: block;
+            margin-left: auto;
             margin-right: 3.5%;
-            margin-left: 87%;
         }
         .title{
             color: #fff;
@@ -95,7 +98,7 @@
         }
         .subheading{
             text-align: center;
-            margin-top: 3%;
+            margin: 3% 20% 0 20%;
             color: #000045;
         }
         .gold-subtitle{
@@ -108,14 +111,15 @@
             letter-spacing: 1px;
         }
         .desc{
+            margin: 4.5% 30% 0 30%;
             text-align: center;
-            margin-top: 4.5%;
             font-family: Georgia, 'Times New Roman', Times, serif;
             letter-spacing: 1px;
         }
         .desc-caption{
-            margin-left: 30%;
-            margin-right: 30%;
+            width: 70%;
+            margin: auto;
+            align-items: center;
             line-height: 1.3;
             color: #000045;
         }
@@ -163,11 +167,43 @@
             margin-bottom: 1%;
             color: #000045;
         }
+        .gallery-table{
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        @media screen and (max-width: 1200px) {
+            .gallery-table td{
+                display: block;
+                margin-bottom: 10%;
+            }
+            .contact-info p{
+                margin: 0 17% 0 17%;
+            }
+        }
+        @media screen and (max-width: 900px) {
+            .menu td{
+                display: block;
+            }
+            .xing{
+                margin-top: 5%;
+                margin-left: 5%;
+            }
+        }
+        @media screen and (max-width: 700px){
+            .desc{
+                margin: 4.5% 10% 0 10%;
+            }
+            .gallery{
+                width: 100%;
+            }
+        }
     </style>
 <body>
     <div class="nav">
         <div class="xing"><a href="index.html" class="link-nav"><i class="fa fa-xing"></i></a></div>
-        <table border="0" class="center" cellspacing="40">
+        <table border="0" class="center" cellspacing="35px">
             <tr>
                 <td><a href="satay.html" class="link-nav">Balinese Satay Skewers</a></td>
                 <td><a href="duck.html" class="link-nav">Crispy Duck with Sambal Matah</a></td>
@@ -189,7 +225,7 @@
     </div>
 
     <div class="desc">
-        <img src="resto1.jpg" width="600px" alt="Our Restaurant">
+        <img src="resto1.jpg" width="100%" alt="Our Restaurant">
         <div class="desc-caption"><p><i>KanSoep Bistro</i> is a modern Indonesian fusion restaurant that <br><u>blends traditional flavors with contemporary culinary techniques.</u><br>
             Offering an upscale dining experience, the bistro presents innovative dishes that combine bold Indonesian spices with global influences.<br>
             Set in a chic, elegant ambiance, <i>KanSoep Bistro</i> is perfect for those seeking a refined and unique culinary adventure.</p></div>
@@ -199,46 +235,36 @@
     <div class="menu">
         <br>
         <h3><u>Our Menu</u></h3>
-        <table border="0" class="center" cellpadding="5">
-            <tr>
-                <td><b>Appetizer</b></td>
-                <td><b>Entrée</b></td>
-                <td><b>Main Course</b></td>
-                <td><b>Dessert</b></td>
-            </tr>
+        <table border="0" class="center" cellpadding="5" width="90%">
             <tr>
                 <td>
-                    <ol>
-                        <li>Sambal Tuna Tartare</li>
-                        <li>Balinese Satay Skewers</li>
-                        <li>Crispy Tempeh Bites</li>
-                        <li>Local Shrimp Dumplings</li>
-                        <li>Gado - Gado</li>
-                    </ol>
+                    <b>Appetizer</b><br><br>
+                    Sambal Tuna Tartare<br>
+                    Balinese Satay Skewers<br>
+                    Crispy Tempeh Bites<br>
+                    Local Shrimp Dumplings<br>
+                    Gado - Gado<br><br>
                 </td>
                 <td>
-                    <ol>
-                        <li>Rendang Croquettes</li>
-                        <li>Chili Lime Scallops</li>
-                        <li>Spicy Grilled Eggplant</li>
-                        <li>Coconut Lemongrass Soup</li>
-                    </ol>
+                    <b>Entrée</b><br><br>
+                    Rendang Croquettes<br>
+                    Chili Lime Scallops<br>
+                    Spicy Grilled Eggplant<br>
+                    Coconut Lemongrass Soup<br><br>
                 </td>
                 <td>
-                    <ol>
-                        <li>Bali-inspired Grilled Snapper</li>
-                        <li>Charcoal-Grilled Lamb Satay</li>
-                        <li>Crispy Duck with Sambal Matah</li>
-                        <li>Vegetarian Nasi Campur</li>
-                        <li>Modern Beef Rendang</li>
-                    </ol>
+                    <b>Main Course</b><br><br>
+                    Bali-inspired Grilled Snapper<br>
+                    Charcoal-Grilled Lamb Satay<br>
+                    Crispy Duck with Sambal Matah<br>
+                    Vegetarian Nasi Campur<br>
+                    Modern Beef Rendang<br><br>
                 </td>
                 <td>
-                    <ol>
-                        <li>Pandan Coconut Panna Cotta</li>
-                        <li>Sticky Rice with Pandan Cream</li>
-                        <li>Klepon Truffles</li>
-                    </ol>
+                    <b>Dessert</b><br><br>
+                    Pandan Coconut Panna Cotta<br>
+                    Sticky Rice with Pandan Cream<br>
+                    Klepon Truffles<br><br>
                 </td>
             </tr>
         </table>
@@ -248,16 +274,20 @@
     <div class="gallery">
         <br>
         <h2>Explore Our Signatures</h2>
-        <table class="center" cellspacing="40">
+        <table class="gallery-table" cellspacing="40">
             <tr>
-                <td><a href="satay.html"><img src="satay.jpg" class="gallery-img"></a></td>
-                <td><a href="duck.html"><img src="duck.jpg" class="gallery-img"></a></td>
-                <td><a href="pannacotta.html"><img src="pannacotta.jpg" class="gallery-img"></a></td>
-            </tr>
-            <tr>
-                <td>Balinese Satay Skewers</td>
-                <td>Crispy Duck with Sambal Matah</td>
-                <td>Pandan Coconut Panna Cotta</td>
+                <td>
+                    <a href="satay.html"><img src="satay.jpg" class="gallery-img"></a><br>
+                    Balinese Satay Skewers
+                </td>
+                <td>
+                    <a href="duck.html"><img src="duck.jpg" class="gallery-img"></a><br>
+                    Crispy Duck with Sambal Matah
+                </td>
+                <td>
+                    <a href="pannacotta.html"><img src="pannacotta.jpg" class="gallery-img"></a><br>
+                    Pandan Coconut Panna Cotta
+                </td>
             </tr>
         </table>
     </div>

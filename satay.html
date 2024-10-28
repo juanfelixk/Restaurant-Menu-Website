@@ -15,7 +15,8 @@
             background-image: 
                 linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 100%),
                 url('sataybg.jpg');
-            background-size: 100%;
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
             overflow: hidden;            
         }
@@ -192,12 +193,30 @@
             border-width: 1px;
             border-color: #000045;
         }
+        @media screen and (max-width: 1200px) {
+            .contact-info p{
+                margin: 0 17% 0 17%;
+            }
+            .feedback table{
+                border-spacing: 0;
+            }
+            .feedback-td{
+                display: block;
+                margin-bottom: 15%;
+            }
+        }
+        @media screen and (max-width: 900px) {
+            .xing{
+                margin-top: 5%;
+                margin-left: 5%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="nav">
         <div class="xing"><a href="index.html" class="link-nav"><i class="fa fa-xing"></i></a></div>
-        <table border="0" class="center" cellspacing="40">
+        <table border="0" class="center" cellspacing="35px">
             <tr>
                 <td><a href="satay.html" class="link-nav">Balinese Satay Skewers</a></td>
                 <td><a href="duck.html" class="link-nav">Crispy Duck with Sambal Matah</a></td>
@@ -224,7 +243,7 @@
     <div class="feedback">
         <table class="center" cellspacing="100">
             <tr>
-                <td>
+                <td class="feedback-td">
                     <font size="25px"><i class="fa fa-xing"></i><br></font>
                     <h1>KanSoep Bistro</h1>
                     <div class="slider-container">
@@ -236,7 +255,7 @@
                         </div>
                     </div>
                 </td>
-                <td>
+                <td class="feedback-td">
                     <div class="form-container">
                         <h3>Your Feedback Matters</h3>
                         Name (optional)<br>
